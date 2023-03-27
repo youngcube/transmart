@@ -9,7 +9,8 @@ export async function translate(params: TranslateParams) {
     Authorization: `Bearer ${openAIApiKey}`,
   }
   const languageName = getLanguageDisplayName(targetLang)
-  const spell = `Translate the i18n JSON file to ${languageName} according to the BCP 47 standard. Keep the keys the same as the original file and make sure the output remains a valid i18n JSON file.`
+  // const spell = `Translate the i18n JSON file to ${languageName} according to the BCP 47 standard. Keep the keys the same as the original file and make sure the output remains a valid i18n JSON file.`
+  const spell = `You are a great translate bot. Translate a i18n locale array content to ${languageName}. It's a array structure, contains many strings, translate each of them and make a new array of translated strings. Consider all the string as a context to make better translation. DO NOT missing any keys or modify any keys.`
   const body = {
     model: openAIApiModel,
     temperature: 0,

@@ -4,6 +4,7 @@
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "description": "Automate your i18n localization with AI",
+  "private": true,
   "files": [
     "lib"
   ],
@@ -18,6 +19,7 @@
   ],
   "scripts": {
     "clean": "lerna run clean",
+    "build": "lerna publish",
     "build:watch": "lerna run build:watch",
     "typecheck": "tsc",
     "typecheck:watch": "tsc --watch",
